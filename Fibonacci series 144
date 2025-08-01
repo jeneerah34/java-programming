@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(),m = sc.nextInt(),next=0;
+        int f=0,s=1,sum=0;
+        if(n>0 && n<=20 && m>0 && m<=20 && n<m){
+            for(int i=1;i<=m;i++){
+                if(i==1)
+                    next=0;
+                else if(i==2)
+                     next=1;
+                else
+                    next=f+s;
+                    f=s;
+                    s=next;
+                
+              if(i>=n){
+                 // System.out.println(next);
+                  sum+=next;
+                 
+              }
+            }
+             System.out.println("The Sum of Fibonacci value is "+(float)sum);
+        } else{
+            System.out.println("Invalid Input");
+        }
+        
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
