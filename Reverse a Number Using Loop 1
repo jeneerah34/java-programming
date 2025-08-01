@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(),rem;
+        String reverse="";
+        
+        if(n>0 && n <1000000000){
+            while(n>0){
+                rem = n% 10;
+                reverse += rem;
+                n = n/10;
+            }
+            System.out.println(reverse);
+        } else {
+            System.out.println("Invalid Input");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
