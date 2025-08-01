@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        String s = String.valueOf(n);
+
+        if (s.length() >= 2) {
+            // Extract first two characters
+            char first = s.charAt(0);
+            char second = s.charAt(1);
+
+            // Swap and print as number
+            String swapped = "" + second + first;
+            System.out.println(Integer.parseInt(swapped));
+        } else{
+            System.out.println("STDOUT");
+        }
+    }
+}
