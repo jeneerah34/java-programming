@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(),sum=0,digitcube=0,rem=0;
+        int number = n ; 
+        if(n>99 && n<=999){
+            
+            while(n>0){
+                rem = n % 10;
+                digitcube = (int)Math.pow(rem,3);
+                sum =sum + digitcube;
+                n = n / 10;
+            }         
+            }
+        if(sum==number){
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
